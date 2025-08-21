@@ -1,0 +1,3034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Solutions CPA | Professional Accounting Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a365d;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            color: #718096;
+            font-weight: 500;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2b6cb0;
+        }
+
+        .nav-cta {
+            background: #2b6cb0;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 2px;
+            background: #4a5568;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 140px 0 100px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJtIDQwIDAgaCAtNDAgdiA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJlOGYwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=') repeat;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #1a365d;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text .highlight {
+            color: #2b6cb0;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #2b6cb0;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: #2c5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #4a5568;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            border-color: #2b6cb0;
+            color: #2b6cb0;
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .trust-badges {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header .overline {
+            color: #2b6cb0;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            border-color: #2b6cb0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2b6cb0, #3182ce);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: #f7fafc;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2b6cb0;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .about-text p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .about-features i {
+            color: #2b6cb0;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #2b6cb0, #3182ce);
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZG90cyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMikiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZG90cykiLz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+        }
+
+        /* Careers Section */
+        .careers {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .why-work-section {
+            margin: 4rem 0;
+        }
+
+        .why-work-section h3,
+        .openings-section h3,
+        .application-process h3 {
+            font-size: 2rem;
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .benefit-card {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2b6cb0, #3182ce);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.2rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Job Listings */
+        .openings-section {
+            margin: 4rem 0;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .job-card:hover {
+            border-color: #2b6cb0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .job-header h4 {
+            font-size: 1.3rem;
+            color: #1a365d;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .job-type {
+            background: #2b6cb0;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .job-meta span {
+            color: #718096;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .job-meta i {
+            color: #2b6cb0;
+        }
+
+        .job-details p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .job-requirements {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-requirements strong {
+            color: #1a365d;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-requirements ul {
+            margin-left: 1rem;
+            color: #4a5568;
+        }
+
+        .job-requirements li {
+            margin-bottom: 0.3rem;
+            line-height: 1.5;
+        }
+
+        .job-footer {
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .apply-btn {
+            background: #2b6cb0;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .apply-btn:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+
+        /* Application Process */
+        .application-process {
+            margin: 4rem 0;
+            background: #f7fafc;
+            padding: 3rem;
+            border-radius: 12px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #2b6cb0;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .step h4 {
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .step p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Career CTA */
+        .career-cta {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #2b6cb0, #3182ce);
+            border-radius: 12px;
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .career-cta h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .career-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .career-cta .btn-primary {
+            background: white;
+            color: #2b6cb0;
+        }
+
+        .career-cta .btn-primary:hover {
+            background: #f7fafc;
+            transform: translateY(-2px);
+        }
+        .contact {
+            padding: 100px 0;
+            background: #f7fafc;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-info p {
+            color: #4a5568;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+
+        .contact-details i {
+            color: #2b6cb0;
+            font-size: 1.1rem;
+            width: 20px;
+            margin-top: 2px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+
+        /* Phone input group styling */
+        .phone-input-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .country-code-select {
+            flex: 0 0 180px;
+            font-size: 0.9rem;
+        }
+
+        .phone-number-input {
+            flex: 1;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2b6cb0;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #2b6cb0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #2c5282;
+            transform: translateY(-1px);
+        }
+
+        .email-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .email-button:hover {
+            background: linear-gradient(45deg, #5a67d8, #6b46c1);
+            transform: translateY(-1px);
+            color: white;
+        }
+
+        .email-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a365d;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #63b3ed;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 2rem;
+            text-align: center;
+            color: #a0aec0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #a0aec0;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #63b3ed;
+        }
+
+        /* Enhanced Mobile Styles */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            backdrop-filter: blur(5px);
+        }
+
+        .mobile-nav-overlay.active {
+            display: block;
+        }
+
+        /* Mobile-first responsive design */
+        @media (max-width: 768px) {
+            /* Navigation improvements */
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 2rem 1.5rem;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                z-index: 1000;
+                justify-content: flex-start;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+                right: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+                margin: 0;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem 0;
+                font-size: 1.1rem;
+                color: #1a365d;
+                border-bottom: none;
+            }
+
+            .nav-cta {
+                margin-top: 1rem;
+                text-align: center;
+                border-radius: 8px;
+                padding: 1rem 1.5rem !important;
+            }
+
+            .mobile-menu {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .mobile-menu.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .mobile-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            /* Hero section mobile optimization */
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: 1.1rem 2rem;
+                font-size: 1rem;
+            }
+
+            /* Trust badges mobile layout */
+            .trust-badges {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .trust-badge {
+                flex: 1;
+                min-width: 140px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Services section mobile */
+            .services {
+                padding: 60px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .service-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            /* Stats section mobile */
+            .stats-section {
+                padding: 60px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            /* About section mobile */
+            .about {
+                padding: 60px 0;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 250px;
+                order: -1;
+            }
+
+            /* Careers section mobile */
+            .careers {
+                padding: 60px 0;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .jobs-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .job-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .career-cta {
+                padding: 2rem 1.5rem;
+            }
+
+            /* Contact section mobile */
+            .contact {
+                padding: 60px 0;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            /* Form improvements for mobile */
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 1rem;
+                font-size: 16px; /* Prevents zoom on all mobile devices */
+                border-radius: 8px;
+            }
+
+            .phone-input-group {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .country-code-select {
+                flex: none;
+            }
+
+            .submit-btn {
+                padding: 1.1rem;
+                font-size: 1.1rem;
+                border-radius: 8px;
+            }
+
+            /* Footer mobile */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            /* General mobile improvements */
+            .section-header h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            nav {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Improved touch targets */
+            .service-link,
+            .back-to-top {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Better spacing for mobile */
+            .section-header {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Extra small mobile devices */
+            .hero-text h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .about-image {
+                height: 200px;
+            }
+
+            /* Logo adjustments */
+            .logo-text {
+                font-size: 1.3rem;
+            }
+
+            .logo-subtext {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Landscape orientation for mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                padding: 100px 0 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Cross-platform touch improvements */
+        @media (max-width: 768px) {
+            /* Ensure proper touch targets for all mobile devices */
+            button, .btn-primary, .btn-secondary, .service-link {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Prevent text selection on touch for all mobile devices */
+            .service-card, .stat-card {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            /* Universal mobile form styling */
+            input, textarea, select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 8px !important;
+            }
+            
+            /* Better mobile scrolling for all platforms */
+            body {
+                -webkit-overflow-scrolling: touch;
+                overflow-scrolling: touch;
+            }
+
+            /* Android and Windows specific improvements */
+            .service-card:active,
+            .stat-card:active,
+            .btn-primary:active,
+            .btn-secondary:active {
+                background-color: rgba(43, 108, 176, 0.1);
+                transform: scale(0.98);
+            }
+
+            /* Better tap highlights for Android */
+            * {
+                -webkit-tap-highlight-color: rgba(43, 108, 176, 0.2);
+                -moz-tap-highlight-color: rgba(43, 108, 176, 0.2);
+                tap-highlight-color: rgba(43, 108, 176, 0.2);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #2b6cb0;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #2c5282;
+            transform: translateY(-2px);
+        }
+        /* Chat Widget Styles */
+    .ai-chat-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Chat Toggle Button */
+    .chat-toggle-btn {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #2b6cb0, #3182ce);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(43, 108, 176, 0.3);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .chat-toggle-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(43, 108, 176, 0.4);
+    }
+
+    .chat-toggle-btn.open {
+        background: #e53e3e;
+    }
+
+    /* Notification Badge */
+    .chat-notification {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background: #f56565;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+
+    
+    /* Chat Widget Styles */
+    .ai-chat-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Chat Toggle Button */
+    .chat-toggle-btn {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #2b6cb0, #3182ce);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(43, 108, 176, 0.3);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .chat-toggle-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(43, 108, 176, 0.4);
+    }
+
+    .chat-toggle-btn.open {
+        background: #e53e3e;
+    }
+
+    /* Notification Badge */
+    .chat-notification {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background: #f56565;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+
+    /* Chat Container */
+    .chat-container {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 350px;
+        height: 500px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        transform: scale(0.8);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .chat-container.open {
+        display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Chat Header */
+    .chat-header {
+        background: linear-gradient(135deg, #2b6cb0, #3182ce);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .chat-header h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .chat-header p {
+        margin: 0.25rem 0 0 0;
+        font-size: 0.8rem;
+        opacity: 0.9;
+    }
+
+    .chat-close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Language Switch */
+    .language-switch {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        background: rgba(255,255,255,0.2);
+        border-radius: 15px;
+        padding: 0.25rem;
+    }
+
+    .lang-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .lang-btn.active {
+        background: rgba(255,255,255,0.3);
+    }
+
+    .lang-btn:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    .language-switch span {
+        color: rgba(255,255,255,0.6);
+        font-size: 0.75rem;
+    }
+
+    /* Chat Messages */
+    .chat-messages {
+        flex: 1;
+        padding: 1rem;
+        overflow-y: auto;
+        background: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .message {
+        max-width: 85%;
+        padding: 0.75rem 1rem;
+        border-radius: 18px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        animation: fadeInUp 0.3s ease;
+    }
+
+    .message.ai {
+        background: white;
+        color: #333;
+        align-self: flex-start;
+        border: 1px solid #e2e8f0;
+        margin-right: auto;
+    }
+
+    .message.user {
+        background: #2b6cb0;
+        color: white;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+
+    /* Typing Indicator */
+    .typing-indicator {
+        display: none;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .typing-dots {
+        background: white;
+        padding: 0.75rem 1rem;
+        border-radius: 18px;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        gap: 4px;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        background: #cbd5e0;
+        border-radius: 50%;
+        animation: typing 1.4s infinite;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+        0%, 60%, 100% { transform: translateY(0); }
+        30% { transform: translateY(-8px); }
+    }
+
+    /* Quick Actions */
+    .quick-actions {
+        padding: 0.5rem 1rem;
+        background: white;
+        border-top: 1px solid #e2e8f0;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .quick-action {
+        background: #f7fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 15px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        color: #4a5568;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .quick-action:hover {
+        background: #2b6cb0;
+        color: white;
+        border-color: #2b6cb0;
+    }
+
+    /* Chat Input */
+    .chat-input-container {
+        padding: 1rem;
+        background: white;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .chat-input-wrapper {
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-end;
+    }
+
+    .chat-input {
+        flex: 1;
+        padding: 0.75rem;
+        border: 2px solid #e2e8f0;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        resize: none;
+        min-height: 20px;
+        max-height: 80px;
+        transition: border-color 0.3s ease;
+    }
+
+    .chat-input:focus {
+        outline: none;
+        border-color: #2b6cb0;
+    }
+
+    .send-btn {
+        width: 36px;
+        height: 36px;
+        background: #2b6cb0;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .send-btn:hover:not(:disabled) {
+        background: #2c5282;
+        transform: scale(1.05);
+    }
+
+    .send-btn:disabled {
+        background: #cbd5e0;
+        cursor: not-allowed;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .chat-container {
+            width: 300px;
+            height: 450px;
+            right: -10px;
+        }
+
+        .ai-chat-widget {
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .chat-toggle-btn {
+            width: 55px;
+            height: 55px;
+            font-size: 1.3rem;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+
+    /* Scrollbar */
+    .chat-messages::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .chat-messages::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .chat-messages::-webkit-scrollbar-thumb {
+        background: #cbd5e0;
+        border-radius: 2px;
+    }
+    </style>
+</head>
+<body>
+   <!-- AI Chat Widget HTML -->
+<div class="ai-chat-widget">
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle-btn" id="chatToggle">
+        <i class="fas fa-robot" id="chatIcon"></i>
+        <div class="chat-notification" id="chatNotification">1</div>
+    </button>
+
+    <!-- Chat Container -->
+    <div class="chat-container" id="chatContainer">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="language-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="sq">SQ</button>
+            </div>
+            <h3 id="chatTitle">AI Accounting Assistant</h3>
+            <p id="chatSubtitle">Ask me about accounting, taxes, and financial questions</p>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai" id="welcomeMessage">
+                Hello! I'm your AI accounting assistant. I can help you with:
+                <br><br>
+                • Basic accounting principles
+                <br>• Tax deductions and planning
+                <br>• Financial statements
+                <br>• Bookkeeping questions
+                <br><br>
+                What would you like to know?
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions" id="quickActions">
+            <div class="quick-action" onclick="sendQuickMessage('What are tax deductions?')" data-en="Tax deductions" data-sq="Zbritje tatimore">Tax deductions</div>
+            <div class="quick-action" onclick="sendQuickMessage('How to read balance sheet?')" data-en="Balance sheet" data-sq="Bilanci">Balance sheet</div>
+            <div class="quick-action" onclick="sendQuickMessage('What is depreciation?')" data-en="Depreciation" data-sq="Amortizimi">Depreciation</div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <div class="chat-input-wrapper">
+                <textarea 
+                    id="chatInput" 
+                    class="chat-input" 
+                    placeholder="Type your accounting question..."
+                    rows="1"
+                ></textarea>
+                <button id="sendBtn" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <div>
+                    <div class="logo-text">Transparent Solutions</div>
+                    <div class="logo-subtext">CERTIFIED PUBLIC ACCOUNTANTS</div>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Get Consultation</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Professional <span class="highlight">Accounting Solutions</span> for Your Business</h1>
+                    <p>Expert financial guidance and comprehensive accounting services. We help businesses navigate complex financial landscapes with confidence and achieve sustainable growth.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Schedule Consultation
+                        </a>
+                        <a href="#services" class="btn-secondary">
+                            <i class="fas fa-arrow-right"></i>
+                            View Services
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-chart-line" style="font-size: 4rem; color: #2b6cb0; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #1a365d; margin-bottom: 1rem;">Trusted by 500+ Businesses</h3>
+                        <p style="color: #4a5568;">Professional accounting services since 1998</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>CPA Certified</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>AICPA Member</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-award"></i>
+                    <span>25+ Years Experience</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-users"></i>
+                    <span>500+ Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">Our Expertise</div>
+                <h2>Comprehensive Financial Services</h2>
+                <p>From audit and assurance to strategic financial consulting, we provide end-to-end accounting solutions tailored to your business needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Audit & Assurance</h3>
+                    <p>Independent audit services ensuring accuracy, compliance, and transparency in your financial reporting. We provide thorough examination and verification of financial records.</p>
+                    <a href="#contact" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Tax Planning & Preparation</h3>
+                    <p>Strategic tax planning and compliance services for individuals and businesses. Minimize tax liability while ensuring full regulatory compliance.</p>
+                    <a href="#contact" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Financial Advisory</h3>
+                    <p>Strategic financial consulting to optimize business performance. Expert guidance for financial planning, analysis, and decision-making processes.</p>
+                    <a href="#contact" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Business Valuation</h3>
+                    <p>Professional business valuation services for mergers, acquisitions, and strategic planning. Accurate assessments for informed decision-making.</p>
+                    <a href="#contact" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive risk assessment and management strategies. Identify, evaluate, and mitigate financial risks to protect your business.</p>
+                    <a href="#contact" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Bookkeeping Services</h3>
+                    <p>Accurate and timely bookkeeping services to maintain organized financial records. From daily transactions to monthly reconciliations.</p>
+                    <a href="#contact" class="service-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Clients Served</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="25">0</span>
+                    <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="98">0</span>
+                    <span class="stat-label">Client Satisfaction Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Team Members</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Trusted Financial Partners Since 1998</h2>
+                    <p>Transparent Solutions has been providing exceptional accounting and financial services for over 25 years. Our team of certified professionals combines deep industry expertise with innovative approaches to deliver solutions that drive growth and ensure compliance.</p>
+                    <p>We serve a diverse range of clients, from startups to established corporations, providing tailored services that meet the unique needs of each business. Our commitment to excellence and integrity has earned us a reputation as one of the region's most trusted accounting firms.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> CPA certified professionals</li>
+                        <li><i class="fas fa-check-circle"></i> Industry-leading expertise</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized service approach</li>
+                        <li><i class="fas fa-check-circle"></i> Technology-driven solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Proven track record of success</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div style="position: relative; z-index: 2;">
+                        <i class="fas fa-building" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Professional Excellence</h3>
+                        <p style="opacity: 0.9;">Building lasting relationships through trusted expertise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="careers" id="careers">
+        <div class="container">
+            <div class="section-header">
+                <div class="overline">Join Our Team</div>
+                <h2>Build Your Career with Us</h2>
+                <p>Join a dynamic team of professionals where your expertise is valued and your career growth is prioritized. We offer competitive benefits, professional development opportunities, and a collaborative work environment.</p>
+            </div>
+
+            <!-- Why Work With Us -->
+            <div class="why-work-section">
+                <h3>Why Choose Transparent Solutions?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Professional Development</h4>
+                        <p>Continuous learning opportunities, certifications, and training programs to advance your career.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4>Work-Life Balance</h4>
+                        <p>Flexible working arrangements and supportive policies that prioritize your well-being.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Collaborative Culture</h4>
+                        <p>Work alongside experienced professionals in a supportive and inclusive environment.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Career Growth</h4>
+                        <p>Clear advancement paths and mentorship opportunities to help you reach your goals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Openings -->
+            <div class="openings-section">
+                <h3>Current Openings</h3>
+                <div class="jobs-grid">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Senior Accountant</h4>
+                            <span class="job-type">Full-time</span>
+                        </div>
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Pristina, Kosovo</span>
+                                <span><i class="fas fa-briefcase"></i> 3-5 years experience</span>
+                            </div>
+                            <p>We're seeking a skilled Senior Accountant to join our team. You'll be responsible for financial reporting, client management, and supporting junior staff.</p>
+                            <div class="job-requirements">
+                                <strong>Requirements:</strong>
+                                <ul>
+                                    <li>Bachelor's degree in Accounting or Finance</li>
+                                    <li>CPA certification preferred</li>
+                                    <li>3+ years of accounting experience</li>
+                                    <li>Strong analytical and communication skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-footer">
+                            <a href="#contact" class="apply-btn">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Tax Specialist</h4>
+                            <span class="job-type">Full-time</span>
+                        </div>
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Pristina, Kosovo</span>
+                                <span><i class="fas fa-briefcase"></i> 2-4 years experience</span>
+                            </div>
+                            <p>Join our tax team to provide comprehensive tax services to our diverse client base. Experience with Kosovo tax regulations is highly valued.</p>
+                            <div class="job-requirements">
+                                <strong>Requirements:</strong>
+                                <ul>
+                                    <li>Bachelor's degree in Accounting, Finance, or Tax</li>
+                                    <li>Knowledge of Kosovo tax laws and ATK regulations</li>
+                                    <li>2+ years of tax preparation experience</li>
+                                    <li>Detail-oriented with strong organizational skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-footer">
+                            <a href="#contact" class="apply-btn">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Junior Auditor</h4>
+                            <span class="job-type">Full-time</span>
+                        </div>
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Pristina, Kosovo</span>
+                                <span><i class="fas fa-briefcase"></i> Entry level</span>
+                            </div>
+                            <p>Perfect opportunity for recent graduates to start their career in auditing. You'll work closely with senior team members on various audit engagements.</p>
+                            <div class="job-requirements">
+                                <strong>Requirements:</strong>
+                                <ul>
+                                    <li>Bachelor's degree in Accounting or related field</li>
+                                    <li>Strong academic record</li>
+                                    <li>Excellent written and verbal communication</li>
+                                    <li>Eagerness to learn and grow</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-footer">
+                            <a href="#contact" class="apply-btn">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h4>Financial Analyst</h4>
+                            <span class="job-type">Full-time</span>
+                        </div>
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Pristina, Kosovo</span>
+                                <span><i class="fas fa-briefcase"></i> 2-4 years experience</span>
+                            </div>
+                            <p>Support our financial advisory team by providing analysis and insights to help clients make informed business decisions.</p>
+                            <div class="job-requirements">
+                                <strong>Requirements:</strong>
+                                <ul>
+                                    <li>Bachelor's degree in Finance or Accounting</li>
+                                    <li>Strong analytical and Excel skills</li>
+                                    <li>Experience with financial modeling</li>
+                                    <li>Excellent presentation skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="job-footer">
+                            <a href="#contact" class="apply-btn">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Process -->
+            <div class="application-process">
+                <h3>Application Process</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Submit Application</h4>
+                        <p>Send your CV and cover letter through our contact form or email directly.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Initial Review</h4>
+                        <p>Our HR team will review your application and contact qualified candidates.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Interview Process</h4>
+                        <p>Meet with our team to discuss your experience and career aspirations.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Welcome Aboard</h4>
+                        <p>Join our team and start your journey with comprehensive onboarding.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="career-cta">
+                <h3>Ready to Join Our Team?</h3>
+                <p>Don't see a position that fits? We're always looking for talented professionals. Send us your CV and tell us how you can contribute to our team.</p>
+                <a href="#contact" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Your CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Contact our team of experts today for a consultation. We're here to help your business achieve its financial goals with confidence and clarity.</p>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Office Address</strong><br>
+                                123 Business Center, Suite 500<br>
+                                New York, NY 10001
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong><br>
+                                +1 (555) 123-4567
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                info@transparent-ks.com
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Business Hours</strong><br>
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 2:00 PM
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="phone-input-group">
+                            <select id="countryCode" name="country_code" class="country-code-select">
+                                <option value="+383">🇽🇰 +383 (Kosovo)</option>
+                                <option value="+1">🇺🇸 +1 (USA/Canada)</option>
+                                <option value="+44">🇬🇧 +44 (UK)</option>
+                                <option value="+49">🇩🇪 +49 (Germany)</option>
+                                <option value="+33">🇫🇷 +33 (France)</option>
+                                <option value="+39">🇮🇹 +39 (Italy)</option>
+                                <option value="+34">🇪🇸 +34 (Spain)</option>
+                                <option value="+31">🇳🇱 +31 (Netherlands)</option>
+                                <option value="+41">🇨🇭 +41 (Switzerland)</option>
+                                <option value="+43">🇦🇹 +43 (Austria)</option>
+                                <option value="+90">🇹🇷 +90 (Turkey)</option>
+                                <option value="+355">🇦🇱 +355 (Albania)</option>
+                                <option value="+389">🇲🇰 +389 (North Macedonia)</option>
+                                <option value="+381">🇷🇸 +381 (Serbia)</option>
+                                <option value="+382">🇲🇪 +382 (Montenegro)</option>
+                                <option value="+387">🇧🇦 +387 (Bosnia & Herzegovina)</option>
+                                <option value="+385">🇭🇷 +385 (Croatia)</option>
+                                <option value="+386">🇸🇮 +386 (Slovenia)</option>
+                                <option value="other">🌍 Other</option>
+                            </select>
+                            <input type="tel" id="phone" name="phone" placeholder="123 456 789" class="phone-number-input">
+                        </div>
+                        <input type="hidden" id="fullPhone" name="full_phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service_interest">
+                            <option value="">Select a service</option>
+                            <option value="audit">Audit & Assurance</option>
+                            <option value="tax">Tax Planning & Preparation</option>
+                            <option value="advisory">Financial Advisory</option>
+                            <option value="valuation">Business Valuation</option>
+                            <option value="risk">Risk Management</option>
+                            <option value="bookkeeping">Bookkeeping Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your business needs..." required></textarea>
+                    </div>
+                    <!-- Hidden field for better email formatting -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Transparent Solutions">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+                    <div class="form-group">
+                        <a href="mailto:info@transparent-ks.com?subject=Contact from Transparent Solutions Website" class="email-button">
+                            <i class="fas fa-envelope"></i>
+                            Email Us Directly
+                        </a>
+                        <p style="text-align: center; margin-top: 1rem; color: #718096; font-size: 0.9rem;">
+                            Click above to open your email app, or use the form below
+                        </p>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Transparent Solutions CPA</h3>
+                    <p>Professional accounting and financial services firm dedicated to helping businesses achieve their financial goals through expert guidance and innovative solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="#services">Audit & Assurance</a>
+                    <a href="#services">Tax Planning & Preparation</a>
+                    <a href="#services">Financial Advisory</a>
+                    <a href="#services">Business Valuation</a>
+                    <a href="#services">Risk Management</a>
+                    <a href="#services">Bookkeeping Services</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal & Compliance</h3>
+                    <a href="https://atk-ks.org/" target="_blank" rel="noopener">ATK Kosovo Tax Law</a>
+                    <a href="#">Kosovo Accounting Standards</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>123 Business Center, Suite 500<br>New York, NY 10001</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Email: info@transparent-ks.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2024 Transparent Solutions CPA. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+       // AI Chat Widget JavaScript
+class AIAccountingChat {
+    constructor() {
+        this.isOpen = false;
+        this.messageCount = 0;
+        
+        // DOM elements
+        this.chatToggle = document.getElementById('chatToggle');
+        this.chatContainer = document.getElementById('chatContainer');
+        this.chatClose = document.getElementById('chatClose');
+        this.chatMessages = document.getElementById('chatMessages');
+        this.chatInput = document.getElementById('chatInput');
+        this.sendBtn = document.getElementById('sendBtn');
+        this.typingIndicator = document.getElementById('typingIndicator');
+        this.chatIcon = document.getElementById('chatIcon');
+        this.chatNotification = document.getElementById('chatNotification');
+        
+        this.initializeEventListeners();
+        this.loadKnowledgeBase();
+        this.initializeLanguage();
+    }
+
+    initializeLanguage() {
+        // Check for saved language preference or detect from browser
+        const savedLang = localStorage.getItem('chatLanguage');
+        const browserLang = navigator.language.toLowerCase();
+        
+        // Default to Albanian if browser is set to Albanian, otherwise English
+        const defaultLang = (savedLang || (browserLang.includes('sq') ? 'sq' : 'en'));
+        
+        this.switchLanguage(defaultLang);
+    }
+
+    initializeEventListeners() {
+        this.chatToggle.addEventListener('click', () => this.toggleChat());
+        this.chatClose.addEventListener('click', () => this.closeChat());
+        this.sendBtn.addEventListener('click', () => this.sendMessage());
+        this.chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                this.sendMessage();
+            }
+        });
+
+        // Language switch functionality
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => this.switchLanguage(e.target.dataset.lang));
+        });
+
+        // Auto-resize textarea
+        this.chatInput.addEventListener('input', () => {
+            this.chatInput.style.height = 'auto';
+            this.chatInput.style.height = this.chatInput.scrollHeight + 'px';
+        });
+    }
+
+    loadKnowledgeBase() {
+        this.currentLanguage = 'en'; // Default to English
+        
+        this.knowledge = {
+            en: {
+                'tax deductions': 'Common business tax deductions include office expenses, business meals (50%), travel costs, professional services, equipment depreciation, and home office expenses. Keep detailed records and receipts for all deductions.',
+                'balance sheet': 'A balance sheet shows your financial position at a specific date. It follows the equation: Assets = Liabilities + Equity. Assets include cash, inventory, and equipment. Liabilities are what you owe, and equity is your ownership stake.',
+                'depreciation': 'Depreciation spreads the cost of an asset over its useful life. Common methods include straight-line (equal amounts each year) and accelerated methods. For example, a $10,000 asset over 5 years = $2,000 annual depreciation.',
+                'bookkeeping': 'Bookkeeping involves recording daily transactions using double-entry accounting. Every transaction affects at least two accounts, and total debits must equal total credits.',
+                'financial statements': 'The main financial statements are: Income Statement (shows profit/loss), Balance Sheet (financial position), Cash Flow Statement (cash movements), and Statement of Equity (ownership changes).',
+                'gaap': 'GAAP (Generally Accepted Accounting Principles) are US accounting standards that ensure consistency and comparability in financial reporting. Key principles include revenue recognition, matching, and full disclosure.',
+                'cash flow': 'Cash flow tracks money coming in and going out of your business. It has three categories: Operating (daily operations), Investing (asset purchases), and Financing (loans/equity).',
+                'accounts receivable': 'Accounts receivable represents money owed to you by customers. Manage it by setting clear payment terms, sending timely invoices, and following up on overdue accounts.',
+                'payroll': 'Payroll involves calculating employee wages, withholding taxes, and making required payments to government agencies. Keep accurate records and stay current with tax obligations.',
+                'audit': 'An audit is an independent examination of financial records to ensure accuracy and compliance. It provides assurance to stakeholders about the reliability of financial statements.',
+                'default': "I understand you're asking about accounting. While I can help with basic questions about tax deductions, financial statements, bookkeeping, depreciation, and GAAP principles, for specific advice please contact our CPAs at info@transparent-ks.com or call (555) 123-4567."
+            },
+            sq: {
+                'zbritje tatimore': 'Zbritjet e zakonshme tatimore për bizneset përfshijnë shpenzimet e zyrës, vaktet e biznesit (50%), kostot e udhëtimit, shërbimet profesionale, amortizimin e pajisjeve dhe shpenzimet e zyrës në shtëpi. Mbani regjistra të detajuara dhe fatura për të gjitha zbritjet.',
+                'bilanci': 'Bilanci tregon pozicionin tuaj financiar në një datë të caktuar. Ndjek ekuacionin: Aktivet = Detyrimet + Kapitali. Aktivet përfshijnë paratë, inventarin dhe pajisjet. Detyrimet janë ajo që borxhoni, dhe kapitali është pjesa juaj pronësore.',
+                'amortizimi': 'Amortizimi shpërndan koston e një aktivi gjatë jetës së tij të dobishme. Metodat e zakonshme përfshijnë vijën e drejtë (shuma të barabarta çdo vit) dhe metodat e përshpejtuara. Për shembull, një aktiv 10,000$ për 5 vjet = 2,000$ amortizim vjetor.',
+                'kontabilitet': 'Kontabiliteti përfshin regjistrimin e transaksioneve ditore duke përdorur kontabilitetin me hyrje të dyfishtë. Çdo transaksion ndikon në të paktën dy llogari, dhe totali i debiteve duhet të jetë i barabartë me totalin e krediteve.',
+                'pasqyrat financiare': 'Pasqyrat kryesore financiare janë: Pasqyra e të Ardhurave (tregon fitim/humbje), Bilanci (pozicioni financiar), Pasqyra e Rrjedhave të Parasë (lëvizjet e parasë), dhe Pasqyra e Kapitalit (ndryshimet e pronësisë).',
+                'gaap': 'GAAP (Parimet e Përgjithshme të Pranuara të Kontabilitetit) janë standardet amerikane të kontabilitetit që sigurojnë konsistencë dhe krahasueshmëri në raportimet financiare. Parimet kryesore përfshijnë njohjen e të ardhurave, përputhjen dhe zbulimin e plotë.',
+                'rrjedha e parasë': 'Rrjedha e parasë ndjek paratë që hyjnë dhe dalin nga biznesi juaj. Ka tre kategori: Operacionale (operacionet ditore), Investimet (blerje aktivesh), dhe Financimi (kredi/kapital).',
+                'llogaritë e arkëtueshme': 'Llogaritë e arkëtueshme përfaqësojnë paratë që ju kanë borxh klientët. Menaxhojini duke vendosur kushte të qarta të pagesës, duke dërguar fatura në kohë dhe duke ndjekur llogaritë e vonuara.',
+                'pagat': 'Pagat përfshijnë llogaritjen e pagave të punonjësve, mbajtjen e taksave dhe kryerjen e pagesave të kërkuara ndaj agjencive qeveritare. Mbani regjistra të saktë dhe qëndroni të përditësuar me detyrimet tatimore.',
+                'auditimi': 'Auditimi është një ekzaminim i pavarur i regjistrave financiarë për të siguruar saktësi dhe përputhshmëri. Jep siguri për palët e interesuara rreth besueshmërisë së pasqyrave financiare.',
+                'default': "E kuptoj që po pyesni rreth kontabilitetit. Ndërsa mund t'ju ndihmoj me pyetje bazike rreth zbritjeve tatimore, pasqyrave financiare, kontabilitetit, amortizimit dhe parimeve GAAP, për këshilla specifike ju lutem kontaktoni CPA-të tona në info@transparent-ks.com ose telefononi (555) 123-4567."
+            }
+        };
+    }
+
+    toggleChat() {
+        if (this.isOpen) {
+            this.closeChat();
+        } else {
+            this.openChat();
+        }
+    }
+
+    openChat() {
+        this.isOpen = true;
+        this.chatContainer.classList.add('open');
+        this.chatToggle.classList.add('open');
+        this.chatIcon.className = 'fas fa-times';
+        this.chatNotification.style.display = 'none';
+        this.chatInput.focus();
+    }
+
+    closeChat() {
+        this.isOpen = false;
+        this.chatContainer.classList.remove('open');
+        this.chatToggle.classList.remove('open');
+        this.chatIcon.className = 'fas fa-robot';
+    }
+
+    addMessage(content, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${isUser ? 'user' : 'ai'}`;
+        messageDiv.textContent = content;
+        
+        this.chatMessages.appendChild(messageDiv);
+        this.scrollToBottom();
+        this.messageCount++;
+    }
+
+    showTyping() {
+        this.typingIndicator.style.display = 'flex';
+        this.scrollToBottom();
+    }
+
+    hideTyping() {
+        this.typingIndicator.style.display = 'none';
+    }
+
+    scrollToBottom() {
+        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+    }
+
+    switchLanguage(lang) {
+        this.currentLanguage = lang;
+        
+        // Update active language button
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            }
+        });
+
+        // Update interface text
+        this.updateInterfaceText();
+        
+        // Update quick actions
+        this.updateQuickActions();
+        
+        // Update welcome message
+        this.updateWelcomeMessage();
+        
+        // Save language preference
+        localStorage.setItem('chatLanguage', lang);
+    }
+
+    updateInterfaceText() {
+        const texts = {
+            en: {
+                title: 'AI Accounting Assistant',
+                subtitle: 'Ask me about accounting, taxes, and financial questions',
+                placeholder: 'Type your accounting question...'
+            },
+            sq: {
+                title: 'Asistenti AI i Kontabilitetit',
+                subtitle: 'Pyesni për kontabilitet, taksa dhe pyetje financiare',
+                placeholder: 'Shkruani pyetjen tuaj të kontabilitetit...'
+            }
+        };
+
+        const currentTexts = texts[this.currentLanguage];
+        
+        document.getElementById('chatTitle').textContent = currentTexts.title;
+        document.getElementById('chatSubtitle').textContent = currentTexts.subtitle;
+        this.chatInput.placeholder = currentTexts.placeholder;
+    }
+
+    updateQuickActions() {
+        const quickActions = document.querySelectorAll('.quick-action');
+        quickActions.forEach(action => {
+            const text = action.dataset[this.currentLanguage];
+            if (text) {
+                action.textContent = text;
+            }
+        });
+    }
+
+    updateWelcomeMessage() {
+        const welcomeMessages = {
+            en: `Hello! I'm your AI accounting assistant. I can help you with:
+                <br><br>
+                • Basic accounting principles
+                <br>• Tax deductions and planning
+                <br>• Financial statements
+                <br>• Bookkeeping questions
+                <br><br>
+                What would you like to know?`,
+            sq: `Përshëndetje! Unë jam asistenti juaj AI i kontabilitetit. Mund t'ju ndihmoj me:
+                <br><br>
+                • Parimet bazike të kontabilitetit
+                <br>• Zbritjet tatimore dhe planifikimin
+                <br>• Pasqyrat financiare
+                <br>• Pyetje kontabiliteti
+                <br><br>
+                Çfarë do të donit të dini?`
+        };
+
+        const welcomeMsg = document.getElementById('welcomeMessage');
+        if (welcomeMsg) {
+            welcomeMsg.innerHTML = welcomeMessages[this.currentLanguage];
+        }
+    }
+
+    findResponse(question) {
+        const lowerQuestion = question.toLowerCase();
+        const currentKnowledge = this.knowledge[this.currentLanguage];
+        
+        // Check for exact matches or partial matches
+        for (const [key, response] of Object.entries(currentKnowledge)) {
+            if (key === 'default') continue;
+            
+            if (lowerQuestion.includes(key) || key.includes(lowerQuestion.split(' ').find(word => word.length > 3))) {
+                return response;
+            }
+        }
+        
+        // Return default response in current language
+        return currentKnowledge.default || currentKnowledge['default'];
+    }
+
+    sendMessage() {
+        const message = this.chatInput.value.trim();
+        if (!message) return;
+
+        // Add user message
+        this.addMessage(message, true);
+        this.chatInput.value = '';
+        this.chatInput.style.height = 'auto';
+        this.sendBtn.disabled = true;
+
+        // Show typing indicator
+        this.showTyping();
+
+        // Simulate AI response delay
+        setTimeout(() => {
+            this.hideTyping();
+            const response = this.findResponse(message);
+            this.addMessage(response);
+            this.sendBtn.disabled = false;
+        }, 1000 + Math.random() * 1500);
+    }
+}
+
+// Quick message function
+function sendQuickMessage(message) {
+    const chatWidget = window.aiChat;
+    if (chatWidget) {
+        chatWidget.chatInput.value = message;
+        chatWidget.sendMessage();
+    }
+}
+
+// Initialize chat widget when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    window.aiChat = new AIAccountingChat();
+    
+    // Show notification after 3 seconds if chat hasn't been opened
+    setTimeout(() => {
+        if (!window.aiChat.isOpen && !localStorage.getItem('chatOpened')) {
+            document.getElementById('chatNotification').style.display = 'flex';
+        }
+    }, 3000);
+});
+
+// Mark chat as seen when opened
+document.getElementById('chatToggle').addEventListener('click', function() {
+    localStorage.setItem('chatOpened', 'true');
+});
+        // Enhanced mobile menu functionality
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+
+        function toggleMobileMenu() {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            navLinks.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenu.addEventListener('click', toggleMobileMenu);
+        mobileNavOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on nav links
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                header.style.backgroundColor = 'rgba(255,255,255,0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                header.style.backgroundColor = '#ffffff';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                closeMobileMenu();
+            });
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + (target === 98 ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Cross-platform form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Form validation
+            const requiredFields = this.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#e53e3e';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '#e2e8f0';
+                }
+            });
+
+            // Email validation
+            const email = this.querySelector('input[type="email"]');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.style.borderColor = '#e53e3e';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                alert('Please fill in all required fields correctly.');
+                return false;
+            }
+
+            // Get form data
+            const name = this.querySelector('#name').value;
+            const userEmail = this.querySelector('#email').value;
+            const countryCode = this.querySelector('#countryCode').value;
+            const phoneNumber = this.querySelector('#phone').value;
+            const serviceInterest = this.querySelector('#service').value;
+            const message = this.querySelector('#message').value;
+
+            // Combine phone number
+            let fullPhone = 'Not provided';
+            if (phoneNumber && countryCode !== 'other') {
+                fullPhone = countryCode + ' ' + phoneNumber;
+            } else if (phoneNumber) {
+                fullPhone = phoneNumber;
+            }
+
+            // Create email content
+            const subject = 'New Contact Form Submission - Transparent Solutions';
+            const body = `New contact form submission from Transparent Solutions website:
+
+Name: ${name}
+Email: ${userEmail}
+Phone: ${fullPhone}
+Service Interest: ${serviceInterest || 'Not specified'}
+
+Message:
+${message}
+
+---
+Sent from transparentsolutions.com contact form`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:info@transparent-ks.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Show the email content to user
+            const emailPreview = `
+TO: info@transparent-ks.com
+SUBJECT: ${subject}
+
+${body}
+            `;
+
+            // Show options to user
+            const userChoice = confirm(`Email content ready!\n\n${emailPreview}\n\nClick OK to try opening your email app, or Cancel to copy the email details.`);
+
+            if (userChoice) {
+                // Try to open email app
+                try {
+                    window.open(mailtoLink, '_self');
+                } catch (error) {
+                    // Fallback: show instructions
+                    alert(`Email app couldn't open automatically. Please:\n\n1. Open your email app\n2. Create new email to: info@transparent-ks.com\n3. Subject: ${subject}\n4. Copy the message content we showed you`);
+                }
+            } else {
+                // Copy option - with fallback for browsers that don't support clipboard API
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(`To: info@transparent-ks.com\nSubject: ${subject}\n\n${body}`).then(() => {
+                        alert('Email content copied to clipboard! Now paste it into your email app.');
+                    }).catch(() => {
+                        showManualCopyInstructions(subject, body);
+                    });
+                } else {
+                    showManualCopyInstructions(subject, body);
+                }
+            }
+
+            // Reset form
+            this.reset();
+        });
+
+        function showManualCopyInstructions(subject, body) {
+            alert(`Please copy this manually:\n\nTo: info@transparent-ks.com\nSubject: ${subject}\n\n${body}`);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and other elements
+        document.querySelectorAll('.service-card, .stat-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Cross-platform mobile enhancements
+        function detectPlatform() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const platform = navigator.platform.toLowerCase();
+            
+            return {
+                isAndroid: /android/.test(userAgent),
+                isIOS: /iphone|ipad|ipod/.test(userAgent),
+                isWindows: /win/.test(platform),
+                isMac: /mac/.test(platform),
+                isLinux: /linux/.test(platform),
+                isMobile: /android|iphone|ipad|ipod|blackberry|opera mini|iemobile|wpdesktop/.test(userAgent)
+            };
+        }
+
+        // Apply platform-specific improvements
+        const platformInfo = detectPlatform();
+
+        // Universal form experience improvements
+        const formInputs = document.querySelectorAll('input, textarea, select');
+        formInputs.forEach(input => {
+            // Prevent zoom on focus for all mobile platforms
+            if (platformInfo.isMobile) {
+                input.addEventListener('focus', function() {
+                    // Ensure font size is at least 16px to prevent zoom on all mobile browsers
+                    if (parseInt(window.getComputedStyle(this).fontSize) < 16) {
+                        this.style.fontSize = '16px';
+                    }
+                });
+                
+                input.addEventListener('blur', function() {
+                    // Reset font size after blur if needed
+                    this.style.fontSize = '';
+                });
+            }
+        });
+
+        // Enhanced swipe gesture for mobile menu (works on all touch devices)
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            // Swipe left to close menu
+            if (diff > swipeThreshold && navLinks.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        }
+
+        // Platform-specific enhancements
+        if (platformInfo.isAndroid) {
+            // Android-specific improvements
+            document.body.style.setProperty('-webkit-tap-highlight-color', 'rgba(43, 108, 176, 0.2)');
+        }
+
+        if (platformInfo.isWindows) {
+            // Windows-specific improvements
+            document.addEventListener('contextmenu', function(e) {
+                // Allow right-click context menu on Windows
+                // This is the default behavior, but ensuring it's not prevented
+            });
+        }
+
+        // Universal accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            // Escape key closes mobile menu
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMobileMenu();
+            }
+            
+            // Enter key on mobile menu trigger
+            if (e.key === 'Enter' && e.target === mobileMenu) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Ensure mobile menu is keyboard accessible
+        mobileMenu.setAttribute('tabindex', '0');
+        mobileMenu.setAttribute('role', 'button');
+        mobileMenu.setAttribute('aria-label', 'Toggle navigation menu');
+        mobileMenu.setAttribute('aria-expanded', 'false');
+
+        // Update aria attributes when menu state changes
+        function updateMobileMenuAria() {
+            const isActive = navLinks.classList.contains('active');
+            mobileMenu.setAttribute('aria-expanded', isActive.toString());
+        }
+
+        // Add to existing toggle function
+        const originalToggle = toggleMobileMenu;
+        toggleMobileMenu = function() {
+            originalToggle();
+            updateMobileMenuAria();
+        };
+
+        const originalClose = closeMobileMenu;
+        closeMobileMenu = function() {
+            originalClose();
+            updateMobileMenuAria();
+        };
+    </script>
+</body>
+</html>
